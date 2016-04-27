@@ -1,0 +1,60 @@
+
+<div class="container">
+  <hr>
+  <div class="row header">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <div class="btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-default btn-primary"><a href="/rock">Play Rock</a></button>
+        </div>
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-default btn-info"><a href="/paper">Play Paper</a></button>
+        </div>
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-default btn-primary"><a href="/scissors">Play Scissors</a></button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+  <hr>
+  <div class="row picture">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <h4>
+        <div class="panel panel-success">
+          <div class="panel-heading text-center text-capitalize"><%= @user_move %></div>
+          <div class="panel-body">
+            <img src="<%= @user_image %>" class="img-rounded img-responsive" alt="Responsive image">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-sm-4">
+        <h4>
+          <div class="panel panel-danger">
+
+            <div class="panel-heading text-center text-capitalize"><%= @computer_move %></div>
+            <div class="panel-body">
+              <img src="<%= @computer_image %>" class="img-rounded img-responsive" alt="Responsive image">
+            </h4>
+          </div>
+        </div>
+
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+
+      <div class="row result">
+
+        <div class="col-sm-12 text-center">
+          <div class="well">
+
+            <h1>
+              <span class="label <%= @result_label %>"><%= @result.capitalize %></h1></span>
+
+            </div>
+          </div>
+        </div>
