@@ -1,34 +1,75 @@
 class PlayController < ApplicationController
 
   def rock
+    computer_play = ["rock", "paper", "scissors"].sample
+    if computer_play == "rock"
+      @computer_move = "Rock"
+      @result = "You tied!"
+      @comp_img = "http://localhost:3000/assets/images/rock.png"
+      @button_color = "label-warning"
 
+    elsif computer_play == "paper"
+      @computer_move = "Paper"
+      @result = "You lost!"
+      @comp_img = "http://localhost:3000/assets/images/paper.png"
+      @button_color = "label-danger"
+
+    else computer_play == "scissors"
+      @computer_move = "Scissors"
+      @result = "You won!"
+      @comp_img = "http://localhost:3000/assets/images/scissors.png"
+      @button_color = "label-success"
+    end
     render("rock.html.erb")
   end
+
+
 
   def paper
+    computer_play = ["rock", "paper", "scissors"].sample
+    if computer_play == "rock"
+      @computer_move = "Rock"
+      @result = "You won!"
+      @comp_img = "http://localhost:3000/assets/images/rock.png"
+      @button_color = "label-success"
 
-    render("rock.html.erb")
+    elsif computer_play == "paper"
+      @computer_move = "Paper"
+      @result = "You tied!"
+      @comp_img = "http://localhost:3000/assets/images/paper.png"
+      @button_color = "label-warning"
+
+    else computer_play == "scissors"
+      @computer_move = "Scissors"
+      @result = "You lost!"
+      @comp_img = "http://localhost:3000/assets/images/scissors.png"
+      @button_color = "label-danger"
+    end
+    render("paper.html.erb")
   end
+
+
 
   def scissors
-    
-    render("rock.html.erb")
+    computer_play = ["rock", "paper", "scissors"].sample
+    if computer_play == "rock"
+      @computer_move = "Rock"
+      @result = "You lost!"
+      @comp_img = "http://localhost:3000/assets/images/rock.png"
+      @button_color = "label-danger"
+
+    elsif computer_play == "paper"
+      @computer_move = "Paper"
+      @result = "You won!"
+      @comp_img = "http://localhost:3000/assets/images/paper.png"
+      @button_color = "label-success"
+
+    else computer_play == "scissors"
+      @computer_move = "Scissors"
+      @result = "You tied!"
+      @comp_img = "http://localhost:3000/assets/images/scissors.png"
+      @button_color = "label-warning"
+    end
+    render("scissors.html.erb")
   end
 end
-
-
-# if user_move == computer_move
-#   puts "You tied!"
-# elsif user_move == "paper" && computer_move == "rock"
-#   puts "You win!"
-# elsif user_move == "paper" && computer_move == "scissors"
-#   puts "You lose!"
-# elsif user_move == "scissors" && computer_move == "rock"
-#   puts "You lose!"
-# elsif user_move == "scissors" && computer_move == "paper"
-#   puts "You win!"
-# elsif user_move == "rock" && computer_move == "paper"
-#   puts "You lose!"
-# elsif user_move == "rock" && computer_move == "scissors"
-#   puts "You win!"
-# end
