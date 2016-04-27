@@ -1,0 +1,55 @@
+<div class="container">
+  <hr>
+  <div class="row">
+    <div class="rps col-sm-offset-2 col-sm-8">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <a button type="button" class="btn btn-primary" href="../rock">Play Rock</a>
+        <a button type="button" class="btn btn-info" href="../paper">Play Paper</a>
+        <a button type="button" class="btn btn-primary" href="../scissors">Play Scissors</a>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="user col-sm-offset-2 col-sm-4">
+      <div class="panel panel-success">
+        <div class="panel-heading text-center">
+          <h3 class="panel-title"><%= @user.to_s.capitalize%></h3>
+        </div>
+        <div class="panel-body">
+          <%= image_tag "/assets/images/"+@user.to_s+".png", :class => "img-responsive", :width => '100%' %>
+        </div>
+      </div>
+    </div>
+    <div class="comp col-sm-4">
+      <div class="panel panel-danger">
+        <div class="panel-heading text-center">
+          <h3 class="panel-title"><%= @comp.to_s.capitalize %></h3>
+        </div>
+        <div class="panel-body">
+          <%= image_tag "/assets/images/"+@comp.to_s+".png", :class => "img-responsive", :width => '100%' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="outcome col-sm-offset-1 col-md-10">
+    <div class="panel panel-default">
+      <div class="panel-heading text-center" style="height: 100px">
+        <h1>
+          <%= form_for(@outcome) do |f| %>
+            <% if @outcome == :won %>
+              <%= f.label :name, "You won!", :class => "label label-success" %>
+            <% elsif @outcome == :lost %>
+              <%= f.label :name, "You lost!", :class => "label label-danger" %>
+            <% else %>
+              <%= f.label :name, "You tied!", :class => "label label-warning" %>
+            <% end %>
+          <% end %>
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
