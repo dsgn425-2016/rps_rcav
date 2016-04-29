@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get("/",{:controller =>"game", :action => "home"})
+  get("/",{:controller =>"game", :action => "stone"})
   get("/rock",{:controller =>"game", :action => "stone"})
   get("/paper",{:controller =>"game", :action => "notepad"})
   get("/scissors",{:controller =>"game", :action => "cutters"})
