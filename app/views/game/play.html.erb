@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Stanley: RockPaperScissors</title>
+  <!-- Connect to Bootstrap CSS -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- These meta tags make Bootstrap responsive and more accessible -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="row horizontal-rule">
+      <div class="col-xs-12">
+        <hr>
+      </div>
+    </div>
+
+    <div class="row play-option-buttons">
+      <div class="col-sm-2">
+      </div>
+      <div class="col-sm-8">
+        <div class="btn-group btn-group-justified" role="group">
+          <a class="btn btn-primary <%= @rock_button_style %>" href="/rock" role="button">Play Rock</a>
+          <a class="btn btn-primary <%= @paper_button_style %>" href="/paper" role="button">Play Paper</a>
+          <a class="btn btn-primary <%= @scissors_button_style %>" href="/scissors" role="button">Play Scissors</a>
+        </div>
+      </div>
+      <div class="col-sm-2">
+      </div>
+    </div>
+
+    <div class="row horizontal-rule">
+      <div class="col-xs-12">
+        <hr>
+      </div>
+    </div>
+    <div class="row options-played">
+      <div class="col-sm-2"></div>
+
+      <div class="col-sm-4">
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h3 class="panel-title text-center"><%= @human_move.capitalize %></h3>
+          </div>
+          <div class="panel-body">
+            <img src="assets/images/<%= @human_move %>.png" class="img-responsive">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title text-center"><%= @ai_move.capitalize %></h3>
+          </div>
+          <div class="panel-body">
+            <img src="assets/images/<%= @ai_move %>.png" class="img-responsive">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+
+    <div class="row game-result">
+      <div class="col-xs-12">
+        <div class=" well text-center">
+          <h1><span class="label <%= @result_style %>"><%=  @result %></span></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
