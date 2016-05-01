@@ -4,38 +4,34 @@
   <meta charset="utf-8">
   <title> Stanley: RockPaperScissors</title>
   <!-- Connect to Bootstrap CSS -->
-  <!-- <link rel="stylesheet" href="../../../public/assets/css/bootstrap.css"> -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- These meta tags make Bootstrap responsive and more accessible -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 <body>
 
-  <h1>Human move: <%= @human_move %></h1>
-  <h1>AI move: <%=  @ai_move %></h1>
 
-  <h1>Result: <%=  @result %></h1>
-
-  <!-- <div class="container">
+  <div class="container">
     <div class="row horizontal-rule">
       <div class="col-xs-12">
         <hr>
+
       </div>
     </div>
     <div class="row play-option-buttons">
       <div class="col-sm-3"></div>
       <div class="play-rock col-sm-2">
-        <p>
-          play rock
-        </p>
+        <a class="btn btn-primary btn-lg btn-block" href="/rock" role="button">Play Rock</a>
+
       </div>
       <div class="play-paper col-sm-2">
-        <p>
-          play paper
-        </p>
+        <a class="btn btn-primary btn-lg btn-block" href="/paper" role="button">Play Paper</a>
       </div>
       <div class="play-scissors col-sm-2">
-        <p>
-          play scissors
-        </p>
+        <a class="btn btn-primary btn-lg btn-block" href="/scissors" role="button">Play Scissors</a>
       </div>
       <div class="col-sm-3"></div>
     </div>
@@ -47,35 +43,31 @@
     <div class="row options-played">
       <div class="col-sm-3"></div>
       <div class="human-play col-sm-3">
-        <p>human played</p>
+          <h1>Human move: <%= @human_move %></h1>
       </div>
       <div class="ai-play col-sm-3">
-        a<p>i played</p>
+          <h1>AI move: <%=  @ai_move %></h1>
       </div>
       <div class="col-sm-3"></div>
     </div>
     <div class="row option-pics">
       <div class="col-sm-3"></div>
       <div class="human-play-pic col-sm-3">
-        <p>human pic</p>
+        <img src="assets/images/rock.png" class="img-responsive">
       </div>
       <div class="ai-play-pic col-sm-3">
-        <p>
-          ai pic
-        </p>
+        <img src="assets/images/paper.png" class="img-responsive">
       </div>
       <div class="col-sm-3"></div>
     </div>
     <div class="row game-result">
       <div class="col-sm-5"></div>
       <div class="result col-sm-2">
-        <p>
-          you win
-        </p>
+        <a class="btn btn-primary btn-lg btn-warning" href="/scissors"> <%=  @result %></a>
       </div>
       <div class="col-sm-5"></div>
     </div>
-  </div> -->
+  </div>
 
 
 

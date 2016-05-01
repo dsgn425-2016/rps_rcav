@@ -23,7 +23,7 @@ class GameController < ApplicationController
     when "rock"
       @result = "You won!"
     when "paper"
-      @result = "You lost"
+      @result = "You tied!"
     when "scissors"
       @result = "You lost!"
     end
