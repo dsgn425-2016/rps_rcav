@@ -1,0 +1,53 @@
+<hr>
+<div class="container">
+  <div class="row rps_buttons">
+    <div class="col-md-offset-2 col-md-8">
+      <div class="btn-group btn-group-justified">
+        <a href="/rock" class="btn btn-block btn-primary">Play Rock</a>
+        <a href="/paper" class="btn btn-block btn-info">Play Paper</a>
+        <a href="/scissors" class="btn btn-block btn-primary">Play Scissors</a>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <div class="row moves">
+    <div class="col-md-offset-2 col-md-4">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h2 class="panel-title text-center">
+            <%= @user_move.capitalize %>
+          </h2>
+        </div>
+        <div class="panel-body">
+          <img class="img-responsive" src="/assets/images/<%= @user_move %>.png">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h2 class="panel-title text-center">
+            <%= @computer_move.capitalize %>
+          </h2>
+        </div>
+        <div class="panel-body">
+          <img class="img-responsive" src="/assets/images/<%= @computer_move %>.png">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row result">
+    <div class="col-xs-12">
+      <div class="well text-center">
+      <h1>
+        <span class="label <%= @result_color %>">
+          <%= @result %>
+        </span>
+      </h1>
+    </div>
+    </div>
+  </div>
+
+</div>
