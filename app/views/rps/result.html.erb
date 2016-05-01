@@ -1,0 +1,53 @@
+
+<div class="container">
+  <hr>
+  <div class="row header">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <div class="btn-group btn-group-justified " role="group" aria-label="...">
+        <a class="btn btn-primary" href="/rock" role="button">Play Rock</a>
+        <a class="btn btn-info" href="/paper" role="button">Play Paper</a>
+        <a class="btn btn-primary" href="/scissors" role="button">Play Scissors</a>
+      </div>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+  <hr>
+  <div class="row picture">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <h4>
+        <div class="panel panel-success">
+          <div class="panel-heading text-center text-capitalize"><%= @user_move %></div>
+          <div class="panel-body">
+            <img src="<%= @user_image %>" class="img-rounded img-responsive" alt="Responsive image">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-sm-4">
+        <h4>
+          <div class="panel panel-danger">
+
+            <div class="panel-heading text-center text-capitalize"><%= @computer_move %></div>
+            <div class="panel-body">
+              <img src="<%= @computer_image %>" class="img-rounded img-responsive" alt="Responsive image">
+            </h4>
+          </div>
+        </div>
+
+        
+        <div class="col-sm-2"></div>
+
+
+        <div class="row result">
+
+          <div class="col-sm-12 text-center">
+            <div class="well" >
+              <h1>
+                <span class="label <%= @result_label %>"><%= @result.capitalize %></h1></span>
+
+              </div>
+            </div>
+          </div>
