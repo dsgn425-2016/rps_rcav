@@ -13,63 +13,67 @@
 </head>
 <body>
 
-
   <div class="container">
+
     <div class="row horizontal-rule">
       <div class="col-xs-12">
         <hr>
-
       </div>
     </div>
+
     <div class="row play-option-buttons">
-      <div class="col-sm-3"></div>
-      <div class="play-rock col-sm-2">
-        <a class="btn btn-primary btn-lg btn-block" href="/rock" role="button">Play Rock</a>
-
+      <div class="col-sm-2">
       </div>
-      <div class="play-paper col-sm-2">
-        <a class="btn btn-primary btn-lg btn-block" href="/paper" role="button">Play Paper</a>
+      <div class="col-sm-8">
+        <div class="btn-group btn-group-justified" role="group">
+          <a class="btn btn-primary <%= @rock_button_style %>" href="/rock" role="button">Play Rock</a>
+          <a class="btn btn-primary <%= @paper_button_style %>" href="/paper" role="button">Play Paper</a>
+          <a class="btn btn-primary <%= @scissors_button_style %>" href="/scissors" role="button">Play Scissors</a>
+        </div>
       </div>
-      <div class="play-scissors col-sm-2">
-        <a class="btn btn-primary btn-lg btn-block" href="/scissors" role="button">Play Scissors</a>
+      <div class="col-sm-2">
       </div>
-      <div class="col-sm-3"></div>
     </div>
+
     <div class="row horizontal-rule">
       <div class="col-xs-12">
         <hr>
       </div>
     </div>
     <div class="row options-played">
-      <div class="col-sm-3"></div>
-      <div class="human-play col-sm-3">
-          <h1>Human move: <%= @human_move %></h1>
+      <div class="col-sm-2"></div>
+
+      <div class="col-sm-4">
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h3 class="panel-title text-center"><%= @human_move.capitalize %></h3>
+          </div>
+          <div class="panel-body">
+            <img src="assets/images/<%= @human_move %>.png" class="img-responsive">
+          </div>
+        </div>
       </div>
-      <div class="ai-play col-sm-3">
-          <h1>AI move: <%=  @ai_move %></h1>
+      <div class="col-sm-4">
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title text-center"><%= @ai_move.capitalize %></h3>
+          </div>
+          <div class="panel-body">
+            <img src="assets/images/<%= @ai_move %>.png" class="img-responsive">
+          </div>
+        </div>
       </div>
-      <div class="col-sm-3"></div>
+      <div class="col-sm-2"></div>
     </div>
-    <div class="row option-pics">
-      <div class="col-sm-3"></div>
-      <div class="human-play-pic col-sm-3">
-        <img src="assets/images/rock.png" class="img-responsive">
-      </div>
-      <div class="ai-play-pic col-sm-3">
-        <img src="assets/images/paper.png" class="img-responsive">
-      </div>
-      <div class="col-sm-3"></div>
-    </div>
+
     <div class="row game-result">
-      <div class="col-sm-5"></div>
-      <div class="result col-sm-2">
-        <a class="btn btn-primary btn-lg btn-warning" href="/scissors"> <%=  @result %></a>
+      <div class="col-xs-12">
+        <div class=" well text-center">
+          <h1><span class="label <%= @result_style %>"><%=  @result %></span></h1>
+        </div>
       </div>
-      <div class="col-sm-5"></div>
     </div>
   </div>
-
-
 
 </body>
 </html>
