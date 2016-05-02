@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RockPaperScissors</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+</head>
+<body>
+
+  <%= yield %>
+
+  <div class="container">
+    <hr>
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 text-center" >
+        <div class="btn-group btn-group-justified" role="group">
+          <a href="/rock" <button type="button" class="btn btn-primary">Play Rock</button></a>
+          <a href="/paper" <button type="button" class="btn btn-info">Play Paper</button></a>
+          <a href="/scissors" <button type="button" class="btn btn-primary">Play Scissors</button></a>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-offset-2 col-md-4 text-center">
+
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h3 class="panel-title"><%= @user_move.capitalize %></h3>
+          </div>
+          <div class="panel-body">
+            <img class="img-responsive" src="assets/images/rock.png" alt="" />
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-4 text-center">
+
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title"><%= @computer_move.capitalize %></h3>
+          </div>
+          <div class="panel-body">
+            Computer's Image
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="well text-center">
+          <h1>
+            <span class="label label-danger">
+              <%= @result %>
+            </span>
+          </h1>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+  </html>
