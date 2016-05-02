@@ -1,0 +1,12 @@
+<h1>Hi!</h1>
+<h1>You <%= @result%>.</h1>
+<p>You played <%=@user_move%>.</p>
+<img src="http://localhost:3000/assets/images/rock.png">
+<p>Computer played <%= @comp_move%>.</p>
+<img src="http://localhost:3000/assets/images/<%= @comp_move%>.png">
+
+
+<h1>Play again</h1>
+<p><a href="http://localhost:3000/rock">Rock</a></p>
+<p><a href="http://localhost:3000/paper">Paper</a></p>
+<p><a href="http://localhost:3000/scissors">Scissors</a></p>
