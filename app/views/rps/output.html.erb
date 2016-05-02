@@ -25,10 +25,10 @@
       <div class="panel panel-success">
         <div class="panel-heading">
           <h2 class="panel-title text-center">
-            <%= @your_move %>
+            <%= @your_move.capitalize %>
           </h2></div>
           <div class="panel-body">
-            <img class="img-responsive" src="<%= @your_image %>">
+            <img class="img-responsive" src="assets/images/<%= @your_move %>.png">
           </div>
         </div>
       </div>
@@ -36,11 +36,11 @@
         <div class="panel panel-danger">
           <div class="panel-heading">
             <h2 class="panel-title text-center">
-              <%= @computer_move %>
+              <%= @computer_move.capitalize %>
             </h2>
           </div>
           <div class="panel-body">
-            <img class="img-responsive" src="<%= @computer_image %>"
+            <img class="img-responsive" src="assets/images/<%= @computer_move %>.png"
           </div>
         </div>
       </div>
