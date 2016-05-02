@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>RockPaperScissors</title>
+
+  <!-- Connect to Bootstrap CSS -->
+  <link rel="stylesheet" href="public/assets/css/bootstrap.css">
+
+  <!-- Connect to Font Awesome CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- Connect to our own additional CSS -->
+  <link rel="stylesheet" href="public/assets/additional_styles.css">
+
+  <!-- Connect to Bootstrap Javascript -->
+  <script src="public/assets/js/bootstrap.js"></script>
+
+  <!-- These meta tags make Bootstrap responsive and more accessible -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Connect to Google Web Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div class="container">
+    <hr>
+    <div class="row user_move">
+      <div class="col-md-8 col-md-offset-2 col-xs-12">
+        <div class="btn-group btn-group-justifed">
+          <a href="/rock" class="btn btn-block btn-primary">Play Rock</a>
+          <a href="/paper" class="btn btn-block btn-primary">Play Paper</a>
+          <a href="/scissors" class="btn btn-block btn-primary">Play Scissors</a>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row computer_move">
+      <div class="col-md-4 col-md-offset-2 col-xs-6">
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h2 class="panel-title text-center">Rock</h2>
+          </div>
+          <div class="panel-body">
+            <img class="img-responsive" src="/assets/images/rock.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-xs-6">
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h2 class="panel-title text-center">Paper</h2>
+          </div>
+          <div class="panel-body">
+            <img class="img-responsive" src="/assets/images/paper.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row result">
+      <div class="col-md-12">
+        <div class="well text-center">
+          <h1>
+            <span class="label label-danger">You lost!</span>
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
