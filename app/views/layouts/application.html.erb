@@ -10,6 +10,7 @@
 </head>
 <body>
   <div class="container">
+    <hr>
     <div class="row">
       <div class="move col-md-offset-2 col-md-8">
         <div class="btn-group btn-group-justified" role="group" aria-label="...">
@@ -31,30 +32,31 @@
         </div>
       </div>
     </div>
+    <hr>
+    <div class="row">
+      <div class="user col-md-offset-2 col-md-4">
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h3 class="panel-title text-center"> <%= @user_move.capitalize %> </h3>
+          </div>
+          <div class="panel-body">
+            <img class="img-responsive" src="/assets/images/<%=@user_move%>.png">
+          </div>
+        </div>
+      </div>
+      <div class="computer col-md-4">
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title text-center"> <%= @computer_move.capitalize %> </h3>
+          </div>
+          <div class="panel-body">
+            <img class="img-responsive" src="/assets/images/<%= @computer_move%>.png">
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="row">
-    <div class="user col-md-offset-2 col-md-4">
-      <div class="panel panel-success">
-        <div class="panel-heading">
-          <h3 class="panel-title text-center"> <%= @user_move.capitalize %> </h3>
-        </div>
-        <div class="panel-body">
-          <img class="img-responsive" src="/assets/images/<%=@user_move%>.png">
-        </div>
-      </div>
-    </div>
-    <div class="computer col-md-4">
-      <div class="panel panel-danger">
-        <div class="panel-heading">
-          <h3 class="panel-title text-center"> <%= @computer_move.capitalize %> </h3>
-        </div>
-        <div class="panel-body">
-          <img class="img-responsive" src="/assets/images/<%= @computer_move%>.png">
-        </div>
-      </div>
-    </div>
+  <%= yield %>
 
-    <%= yield %>
-
-  </body>
-  </html>
+</body>
+</html>
