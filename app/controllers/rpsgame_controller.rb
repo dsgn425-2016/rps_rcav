@@ -1,24 +1,26 @@
 class RpsgameController < ApplicationController
 
   def userplays
-    @user_move = params["urlsuffix"].capitalize
-    @user_image = "/assets/images/#{@user_move}.png"
-    choices = ["rock","scissors","paper"]
-    @computer_move = choices.sample
-    if @computer_move == "rock"
+
+    if ["rock","scissors","paper"].exclude?(params[:urlsuffix])
+      @user_move = "rock"
+    else
+      @user_move = params[:urlsuffix]
+    end
+
+    @computer_move = ["rock","scissors","paper"].sample
+
+    if @computer_move == @user_move
       @result = "You're tied!"
-      @computer_image = "/assets/images/rock.png"
       @label = "label-warning"
-    elsif @computer_move == "paper"
+    elsif @computer_move == "rock" && @user_move == "scissors" || @computer_move == "scissors" && user_move == "paper" || @computer_move == "paper" && user_move == "rock"
       @result = "You lose!"
-      @computer_image = "/assets/images/paper.png"
       @label = "label-danger"
-    elsif @computer_move == "scissors"
+    elsif @computer_move == "rock" && @user_move == "paper" || @computer_move == "scissors" && user_move == "rock" || @computer_move == "paper" && @user_move == "scissors"
       @result = "You win!"
-      @computer_image = "/assets/images/scissors.png"
       @label = "label-success"
     end
+
     render("rock.html.erb")
   end
-
 end
