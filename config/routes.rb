@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  get("/", { :controller => "moves", :action => "rock"})
+  get("/rock", { :controller => "moves", :action => "rock"})
+  get("/scissors", { :controller => "moves", :action => "scissors"})
+  get("/paper", { :controller => "moves", :action => "paper"})
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
