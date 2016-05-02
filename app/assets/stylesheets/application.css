@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+h1, h2 {
+  text-align: center;
+}
+#lefty {
+  text-align: left;
+}

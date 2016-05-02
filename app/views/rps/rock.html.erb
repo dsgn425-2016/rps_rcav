@@ -1,0 +1,12 @@
+<u><h1>Welcome to the Rock Paper Scissor Game!</h1></u>
+
+<h2>You choose rock <img src="/assets/images/rock.png" style="width:60px; height:60px;"></h2>
+<h2>The computer chose <%= @comp_move %> <img src= <%= @comp_img %> style="width:60px; height:60px;"></h2>
+<h2> <%= @winner %></h2>
+<br>
+<h2 id="lefty">play again?</h2>
+<div class="row" align="center">
+  <div class="col-xs-6 col-md-3"><a href="/rock" class="thumbnail">play rock</a></div>
+  <div class="col-xs-6 col-md-3"><a href="/scissors" class="thumbnail">play scissors</a></div>
+  <div class="col-xs-6 col-md-3"><a href="/paper" class="thumbnail">play paper</a></div>
+</div>
