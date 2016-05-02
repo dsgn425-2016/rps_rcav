@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+
+get("/", { :controller => "moves", :action => "rock"})
+get("/rock", { :controller => "moves", :action => "rock"})
+get("/paper", { :controller => "moves", :action => "paper"})
+get("/scissors", { :controller => "moves", :action => "scissors"})
+
+# NOTES 5/2 CLASS
+# when you add a : to the front, get("/:zebra",...), then anything you type into the link will work: localhost:3000/giraffe, etc. Anything typed after the :, you use the key "zebra" in whatever is typed after in the parameter hash -->
+# params = {"zebra"=>"giraffe"} --> params hash is unique in that it can be a symbol or string
+# apply it: @user_move = params["zebra"] --> this is how you gets something out of the params hash
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
