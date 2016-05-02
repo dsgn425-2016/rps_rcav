@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+
+ .btn-group-justified {
+     display: table;
+     width: 100%;
+     table-layout: fixed;
+     border-collapse: separate;
+ }
+
+ .btn-group {
+    position: relative;
+    vertical-align: middle;
+}
+
+
+
+
+
+hr {
+    display: block;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+.tied {
+    background-color: #f0ad4e;
+}
+
+.lost {
+    background-color: #d9534f;
+}
+
+.won {
+    background-color: #5cb85c;
+}
