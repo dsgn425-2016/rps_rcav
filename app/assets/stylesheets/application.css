@@ -44,10 +44,10 @@ hr {
     background-color: #f0ad4e;
 }
 
-.won {
+.lost {
     background-color: #d9534f;
 }
 
-.lost {
+.won {
     background-color: #5cb85c;
 }
