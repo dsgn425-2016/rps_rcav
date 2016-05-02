@@ -5,22 +5,23 @@ class UserplaysController <ApplicationController
     @computer_move = ["rock","paper","scissors"].sample
 
     if @user_move == @computer_move
-      @result = "tied!"
+      @result = "tied"
     elsif @user_move == "paper" && @computer_move == "rock"
-      @result = "win!"
+      @result = "win"
     elsif @user_move == "paper" && @computer_move == "scissors"
-      @result = "lose!"
+      @result = "lose"
     elsif @user_move == "scissors" && @computer_move == "rock"
-      @result = "lose!"
+      @result = "lose"
     elsif @user_move == "scissors" && @computer_move == "paper"
-      @result = "win!"
+      @result = "win"
     elsif @user_move == "rock" && @computer_move == "paper"
-      @result = "lose!"
+      @result = "lose"
     elsif @user_move == "rock" && @computer_move == "scissors"
-      @result = "win!"
+      @result = "win"
     end
 
     @result
+    @result_color = {"win"=>"success", "lose"=> "danger", "tied"=>"warning"}
     render("rps.html.erb")
   end
 end
