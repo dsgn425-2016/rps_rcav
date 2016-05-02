@@ -1,8 +1,10 @@
 class RpsController < ApplicationController
   def rock
     @user_move = "rock"
+    @user_image="http://localhost:3000/assets/images/rock.png"
 
     @computer_move = ["rock","paper","scissors"].sample
+    @computer_image="http://localhost:3000/assets/images/"+@computer_move+".png"
 
     if @user_move == @computer_move
       @result= "tie"
@@ -17,8 +19,11 @@ class RpsController < ApplicationController
 
   def paper
     @user_move = "paper"
+    @user_image="http://localhost:3000/assets/images/paper.png"
 
     @computer_move = ["rock","paper","scissors"].sample
+
+    @computer_image="http://localhost:3000/assets/images/"+@computer_move+".png"
 
     if @user_move == @computer_move
       @result= "tie"
@@ -33,8 +38,10 @@ class RpsController < ApplicationController
 
   def scissors
     @user_move = "scissors"
+    @user_image="http://localhost:3000/assets/images/scissors.png"
 
     @computer_move = ["rock","paper","scissors"].sample
+    @computer_image="http://localhost:3000/assets/images/"+@computer_move+".png"
 
     if @user_move == @computer_move
       @result= "tie"
