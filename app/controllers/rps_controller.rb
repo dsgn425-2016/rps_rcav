@@ -1,4 +1,4 @@
-class RpsController < ActionController::Base
+class RpsController < ApplicationController
   def game_output
     @your_image = "assets/images/#{@your_move}.png"
     @computer_image = "assets/images/#{@computer_move}.png"
