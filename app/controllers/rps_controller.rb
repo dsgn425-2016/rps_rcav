@@ -11,7 +11,7 @@ class RpsController < ApplicationController
     if @computer_move==@your_move
       @result_words= "You tied!"
       @result_label = "label-warning"
-    elsif @computer_move=="paper"
+    elsif @computer_move=="Paper"
       @result_words = "You lose!"
       @result_label="label-danger"
     else
@@ -27,7 +27,7 @@ class RpsController < ApplicationController
     if @computer_move==@your_move
       @result_words= "You tied!"
       @result_label = "label-warning"
-    elsif @computer_move=="scissors"
+    elsif @computer_move=="Scissors"
       @result_words = "You lose!"
       @result_label="label-danger"
     else
@@ -43,7 +43,7 @@ class RpsController < ApplicationController
     if @computer_move==@your_move
       @result_words= "You tied!"
       @result_label = "label-warning"
-    elsif @computer_move=="rock"
+    elsif @computer_move=="Rock"
       @result_words = "You lose!"
       @result_label="label-danger"
     else
