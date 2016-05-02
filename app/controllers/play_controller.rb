@@ -7,8 +7,9 @@ class PlayController < ApplicationController
     elsif @computer_move == "paper"
       @result = "lose"
     elsif @computer_move == "scissors"
-      @result  == "win"
+      @result = "win"
     end
+
     @result = "#{@result}"
 
     render("rock.html.erb")
@@ -28,7 +29,7 @@ class PlayController < ApplicationController
 
     render("paper.html.erb")
   end
-  
+
   def scissors
     @computer_move = ["rock", "paper", "scissors"].sample
 
