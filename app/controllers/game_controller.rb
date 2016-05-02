@@ -2,7 +2,7 @@ class GameController < ApplicationController
   def default
     render 'default'
   end
-
+# methods for each player move
   def playrock
     @user_move="rock"
 @user_image= "/assets/images/rock.png"
