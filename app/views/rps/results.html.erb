@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+      <meta charset="utf-8">
+
+      <!-- Connect to Bootstrap CSS -->
+      <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+      <!-- Connect to Font Awesome CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+      <!-- Connect to our own additional CSS -->
+      <link rel="stylesheet" href="assets/additional_styles.css">
+
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+      <!-- Connect to jQuery (required before Bootstrap Javascript) -->
+      <script src="assets/jquery-2.2.2.min.js"></script>
+
+      <!-- Connect to Bootstrap Javascript -->
+      <script src="assets/bootstrap/js/bootstrap.js"></script>
+
+      <!-- These meta tags make Bootstrap responsive and more accessible -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Connect to Google Web Fonts -->
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic,400italic,600italic,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
+
+  </head>
+  <body>
+
+    <div class="main-content container padding-inside-top-md padding-inside-bottom-md">
+
+      <div class="col-md-offset-3 col-md-6">
+
+      <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-default btn-lg">  <a href="http://localhost:3000/rock" class=" back-blue font-white">
+            Play rock
+          </a></button>
+        <button type="button" class="btn btn-default btn-lg">  <a href="http://localhost:3000/paper" class="back-blue font-white">
+            Play paper
+          </a></button>
+        <button type="button" class="btn btn-default btn-lg">  <a href="http://localhost:3000/scissors" class=" back-blue font-white">
+            Play scissors
+          </a></button>
+      </div>
+    </div>
+
+
+
+
+    <div class="row">
+            <div class="col-md-offset-3 col-md-3">
+              <h1> <%= @user_move %><h1>
+              <img src="<%= @user_image%>" class="img-responsive">
+            </div>
+            <div class="col-md-3">
+                <h1><%= @computer_move %><h1>
+              <img src="<%= @computer_image%>" class="img-responsive">
+            </div>
+    </div>
+
+    <div class="row">
+           <div class="col-md-offset-5 col-md-2 ">
+             <button type="submit" class="btn btn-default ">
+               <a href="#" class=" font-white">
+                 You <%= @result %> !
+               </a>
+             </button>
+
+
+           </div>
+       </div>
+
+
+
+    </div>
+
+  </body>
+</html>
