@@ -3,6 +3,8 @@ class RpsgameController < ApplicationController
   def rock
     choices = ["rock","scissors","paper"]
     @computer_move = choices.sample
+    @user_move = "rock"
+    @user_image = "/assets/images/rock.png"
     if @computer_move == "rock"
       @result = "You're tied!"
       @computer_image = "/assets/images/rock.png"
@@ -22,6 +24,8 @@ class RpsgameController < ApplicationController
   def paper
     choices = ["rock","scissors","paper"]
     @computer_move = choices.sample
+    @user_move = "paper"
+    @user_image = "/assets/images/paper.png"
     if @computer_move == "rock"
       @result = "You win!"
       @computer_image = "/assets/images/rock.png"
@@ -35,12 +39,14 @@ class RpsgameController < ApplicationController
       @computer_image = "/assets/images/scissors.png"
       @label = "label-danger"
     end
-    render("paper.html.erb")
+    render("rock.html.erb")
   end
 
   def scissors
     choices = ["rock","scissors","paper"]
     @computer_move = choices.sample
+    @user_move = "scissors"
+    @user_image = "/assets/images/scissors.png"
     if @computer_move == "rock"
       @result = "You lose!"
       @computer_image = "/assets/images/rock.png"
@@ -54,7 +60,7 @@ class RpsgameController < ApplicationController
       @computer_image = "/assets/images/scissors.png"
       @label = "label-warning"
     end
-    render("scissors.html.erb")
+    render("rock.html.erb")
   end
 
 end
