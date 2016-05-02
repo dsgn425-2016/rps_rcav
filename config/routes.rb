@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get("/", {:controller=>"rps", :action=>"rock"})
   get("/rock", {:controller=>"rps", :action=>"rock"})
   get("/paper", {:controller=>"rps", :action=>"paper"})
   get("/scissors", {:controller=>"rps", :action=>"scissors"})
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

@@ -1,4 +1,4 @@
-clasRpsController <ApplicationController
+class RpsController < ApplicationController
   def rock
     @user_move = "rock"
     @computer_move=["rock","paper","scissors"].sample
@@ -13,7 +13,7 @@ clasRpsController <ApplicationController
       @result= "won"
       @label= "label-success"
     end
-      render("rock.html.erb")
+    render("rock.html.erb")
   end
   def paper
     @user_move = "paper"
@@ -45,3 +45,4 @@ clasRpsController <ApplicationController
     end
     render("scissors.html.erb")
   end
+end
