@@ -3,7 +3,7 @@
 <html>
 <head>
   <!-- Connect to Bootstrap CSS -->
-  
+
   <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css">
 
   <title>RockPaperScissors</title>
@@ -16,11 +16,10 @@
   <h1>hello this is a paper test</h1>
 
   <%= yield %>
+  <% @user_move c="rock" %>
 
 
   <!-- ********************** -->
-
-
   <div class="container">
     <hr>
 
@@ -85,7 +84,6 @@
       </div>
     </div>
   </div>
-
   <!-- ********************* -->
 
 </body>

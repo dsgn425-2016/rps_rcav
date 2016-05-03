@@ -12,8 +12,31 @@
 </head>
 <body>
 
-<h1>hello this is a test</h1>
-<%= yield %>
+  <h1>hello this is a test</h1>
+
+  <ul>
+    <li>
+      <a href="/play/rock">Play Rock</a>
+    </li>
+
+    <li>
+      <a href="/play/paper">Play Paper</a>
+    </li>
+
+    <li>
+      <a href="/play/scissors">Play Scissors</a>
+    </li>
+  </ul>
+
+
+
+  <p>You played <%= @user_move %>!</p>
+
+  <p>The computer played <%= @computer_move %>!</p>
+
+  <p>You <%= @result %>!</p>
+  <p> you <%= @result %></p>
+
 
 </body>
 </html>
