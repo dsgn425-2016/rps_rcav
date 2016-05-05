@@ -5,10 +5,77 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+
+  <!-- # Css LInk  -->
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+  <!-- <link rel="stylesheet"  type="text/css" href="assets/css/bootstrap.theme.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"> -->
+
+  <!-- <link rel="stylesheet" href="assets/css/bootstrap.css">  -->
+
+  <!-- Other Links -->
+
 </head>
 <body>
 
-<%= yield %>
+  <div class="container">
+    <div class="row userplay">
+      <hr>
+      <div class="col-md-offset-3 col-md-6">
+        <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
+          <a href="#" class="btn btn-default" role="button">Play Rock</a>
+          <a href="#" class="btn btn-default" role="button">Play Paper</a>
+          <a href="#" class="btn btn-default" role="button">Play Scissors</a>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row computerplay">
+      <div class="col-md-offset-3 col-md-3">
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h2 class="panel-title text-center">
+              Rock
+            </h2>
+          </div>
+          <div class="panel-body">
+            <img class="img-responsive" src="/assets/images/rock.png">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h2 class="panel-title text-center">
+              Scissors
+            </h2>
+          </div>
+          <div class="panel-body">
+            <img class="img-responsive" src="/assets/images/scissors.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row footer">
+      <div class="col-md-offset-2 col-md-8">
+        <div class="well text-center">
+          <h1>
+            <span class="label label-success">
+              You won!
+            </span>
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <%= yield %>
 
 </body>
 </html>

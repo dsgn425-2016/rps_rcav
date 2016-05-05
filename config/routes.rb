@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+
+  #things start with the route that perform an action to call a view template
+
+  get("/rock", { :controller => "sessions", :action => "rock" })
+
+  get("/paper", { :controller => "sessions", :action => "paper" })
+
+  get("/scissors", { :controller => "sessions", :action => "scissors" })
+
+
+  #when you get to the dynamic routes, you use get("/:something")
+#params{:move]}
+
+end
+
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +72,3 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
