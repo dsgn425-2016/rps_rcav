@@ -20,14 +20,15 @@
 </head>
 <body>
 
+
   <div class="container">
     <div class="row userplay">
       <hr>
       <div class="col-md-offset-3 col-md-6">
         <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
-          <a href="#" class="btn btn-default" role="button">Play Rock</a>
-          <a href="#" class="btn btn-default" role="button">Play Paper</a>
-          <a href="#" class="btn btn-default" role="button">Play Scissors</a>
+          <a href="/rock" class="btn btn-default" role="button">Play Rock</a>
+          <a href="/paper" class="btn btn-default" role="button">Play Paper</a>
+          <a href="/scissors" class="btn btn-default" role="button">Play Scissors</a>
         </div>
       </div>
     </div>
@@ -37,23 +38,25 @@
         <div class="panel panel-success">
           <div class="panel-heading">
             <h2 class="panel-title text-center">
-              Rock
+              <%= @user_move %>
             </h2>
           </div>
           <div class="panel-body">
-            <img class="img-responsive" src="/assets/images/rock.png">
           </div>
+          <img class="img-responsive" src="/<%= @rps_image %>">
         </div>
       </div>
       <div class="col-md-3">
         <div class="panel panel-danger">
           <div class="panel-heading">
             <h2 class="panel-title text-center">
-              Scissors
+              <%= @computer_move   %>
             </h2>
           </div>
+
+          <img class="img-responsive" src="/assets/images/<%= @computer_move %>.png">
           <div class="panel-body">
-            <img class="img-responsive" src="/assets/images/scissors.png">
+            <!-- <img class="img-responsive" src="/assets/images/scissors.png"> -->
           </div>
         </div>
       </div>
@@ -63,7 +66,7 @@
         <div class="well text-center">
           <h1>
             <span class="label label-success">
-              You won!
+              <%= @result %>
             </span>
           </h1>
         </div>
