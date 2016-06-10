@@ -56,6 +56,7 @@ Rails.application.routes.draw do
 
 
   get("/welcomePage", :controller => 'sessions', :action => 'application')
+  get("/", :controller => 'sessions', :action => 'application')
 
   # This is a flexible route
   # get("/play/:expectedPlayerMove", :controller => 'sessions', :action => 'rock')
